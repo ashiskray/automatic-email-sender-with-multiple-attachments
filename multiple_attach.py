@@ -17,9 +17,9 @@ for file_path in files :
         maintype,subtype=mime_type.split('/')
     email.add_attachment(file_data,maintype=maintype,subtype=subtype,filename=file_name)
 
-sender_email="dataautomation.py@gmail.com"
-receiver_email="raydit.business@gmail.com"
-app_password="bysrdzjryxrlaluo"
+sender_email="senders.mail@gmail.com"     # senders mail
+receiver_email="receavers.mail@gmail.com"  # receivers mail
+app_password="your_app_password"           # app password 
 
 email['from']=sender_email
 email['to']=receiver_email
@@ -31,5 +31,6 @@ with smtplib.SMTP_SSL("smtp.gmail.com",465,context =context) as smtp :
     smtp.send_message(email)
 
 print ("done brooooo")
+
 
     
